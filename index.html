@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 <script src="assets/nav.js" defer></script>
 </head>
 <body>
@@ -46,6 +47,7 @@
 <main id="top">
 <section class="hero">
   <div class="bg" role="img" aria-label="Chiropractic care at Anthony Medical &amp; Chiropractic Center" style="background-image:url(assets/img/hero.webp)"></div>
+  <video class="bgv" autoplay muted loop playsinline preload="auto" poster="assets/img/hero.webp" aria-hidden="true" tabindex="-1"><source src="assets/video/hero.mp4" type="video/mp4"></video>
   <div class="veil"></div>
   <div class="wrap">
     <div class="eyebrow" style="color:#fff">Serving patients across Central Texas</div>
@@ -182,6 +184,9 @@
       <h2>11 offices across <span class="accent">Central Texas</span></h2>
       <p>Each card opens that location&rsquo;s finished design preview. NAP and phone come from those builds.</p>
     </div>
+    <p class="loc-note">Map mockup. Each pin is one office. The cards underneath are the same list, so you can compare the two before choosing.</p>
+    <div id="loc-map" class="loc-map" role="region" aria-label="Map of the 11 offices"></div>
+    <script type="application/json" id="loc-map-data">[{"name":"Copperas Cove","short":"CC","line1":"1856 Patriot Circle","city":"Copperas Cove, TX 76522","phone":"2542067131","display":"(254) 206-7131","preview":"https://localember.github.io/amc-copperascove-design-preview/","lat":31.1138549,"lng":-97.874032},{"name":"Georgetown","short":"GT","line1":"101 Cooperative Way #235","city":"Georgetown, TX 78626","phone":"5126300060","display":"(512) 630-0060","preview":"https://localember.github.io/amc-georgetown-design-preview/","lat":30.6120309,"lng":-97.6828412},{"name":"Hewitt","short":"HE","line1":"518 North Hewitt Drive","city":"Hewitt, TX 76643","phone":"2542350793","display":"(254) 235-0793","preview":"https://localember.github.io/amc-hewitt-design-preview/","lat":31.4716473,"lng":-97.2009552},{"name":"Jarrell","short":"JA","line1":"539 Town Center Blvd","city":"Jarrell, TX 76537","phone":"5128838048","display":"(512) 883-8048","preview":"https://localember.github.io/amc-jarrell-design-preview/","lat":30.816035,"lng":-97.6138554},{"name":"Killeen","short":"KI","line1":"900 W Central Texas Expy","city":"Killeen, TX 76541","phone":"2546344010","display":"(254) 634-4010","preview":"https://localember.github.io/amc-killeen-design-preview/","lat":31.107639,"lng":-97.746782},{"name":"North Waco","short":"NW","line1":"1139 N Loop 340","city":"Waco, TX 76705","phone":"2547998343","display":"(254) 799-8343","preview":"https://localember.github.io/amc-northwaco-design-preview/","lat":31.6034191,"lng":-97.101674},{"name":"Round Rock","short":"RR","line1":"2201 Double Creek Dr, Suite 4001","city":"Round Rock, TX 78664","phone":"5129957699","display":"(512) 995-7699","preview":"https://localember.github.io/amc-roundrock-design-preview/","lat":30.4928045,"lng":-97.6449899},{"name":"Taylor","short":"TA","line1":"816 N Main St","city":"Taylor, TX 76574","phone":"5123525285","display":"(512) 352-5285","preview":"https://localember.github.io/amc-taylor-design-preview/","lat":30.57463,"lng":-97.4100026},{"name":"Temple","short":"TE","line1":"61 N Kegley Rd","city":"Temple, TX 76502","phone":"2548992225","display":"(254) 899-2225","preview":"https://localember.github.io/amc-temple-design-preview/","lat":31.1139681,"lng":-97.3995615},{"name":"Waco","short":"WA","line1":"5000 W Waco Dr","city":"Waco, TX 76710","phone":"2545371064","display":"(254) 537-1064","preview":"https://localember.github.io/amc-waco-design-preview/","lat":31.5196923,"lng":-97.1795971},{"name":"West Georgetown","short":"WG","line1":"4887 Williams Dr #103","city":"Georgetown, TX 78633","phone":"5123167930","display":"(512) 316-7930","preview":"https://localember.github.io/amc-westgeorgetown-design-preview/","lat":30.6964798,"lng":-97.7336548}]</script>
     <div class="loc-grid"><div class="loc"><h3>Copperas Cove</h3><p>1856 Patriot Circle<br>Copperas Cove, TX 76522</p><a class="ph" href="tel:2542067131">(254) 206-7131</a><div class="links"><a href="https://localember.github.io/amc-copperascove-design-preview/" rel="noopener" target="_blank">Location preview</a><a href="https://www.google.com/maps/search/?api=1&amp;query=1856+Patriot+Circle+Copperas+Cove,+TX+76522" rel="noopener" target="_blank">Directions</a></div></div>
 <div class="loc"><h3>Georgetown</h3><p>101 Cooperative Way #235<br>Georgetown, TX 78626</p><a class="ph" href="tel:5126300060">(512) 630-0060</a><div class="links"><a href="https://localember.github.io/amc-georgetown-design-preview/" rel="noopener" target="_blank">Location preview</a><a href="https://www.google.com/maps/search/?api=1&amp;query=101+Cooperative+Way+#235+Georgetown,+TX+78626" rel="noopener" target="_blank">Directions</a></div></div>
 <div class="loc"><h3>Hewitt</h3><p>518 North Hewitt Drive<br>Hewitt, TX 76643</p><a class="ph" href="tel:2542350793">(254) 235-0793</a><div class="links"><a href="https://localember.github.io/amc-hewitt-design-preview/" rel="noopener" target="_blank">Location preview</a><a href="https://www.google.com/maps/search/?api=1&amp;query=518+North+Hewitt+Drive+Hewitt,+TX+76643" rel="noopener" target="_blank">Directions</a></div></div>
@@ -282,6 +287,8 @@
 </footer>
 <div class="scta" id="scta" role="region" aria-label="New patient specials and call"><div class="wrap"><a class="btn btn-primary" href="special/">See New Patient Specials</a><a class="btn btn-ghost" href="tel:2544106888">Call (254) 410-6888</a></div></div>
 <script src="assets/sticky-cta.js" defer></script>
+<script src="assets/vendor/leaflet/leaflet.js" defer></script>
+<script src="assets/loc-map.js" defer></script>
 <script src="assets/review-comments.js" defer></script>
 </body>
 </html>
