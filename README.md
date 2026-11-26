@@ -1,8 +1,14 @@
-# AMC main homepage: Design preview, not live
+# AMC main site: Design preview, not live
 
-Ticket AMC-2026-11-24-main (Local Ember Design Worker 3, 2026-11-24 CT).
-Anthony Medical & Chiropractic Center main site (anthonychiro.com) first homepage mockup on the Local Ember Alpine template, recolored to AMC's logo palette.
+Ticket AMC-2026-11-26-main-site-build.
+Full anthonychiro.com brand-hub preview on the Copperas Cove / Alpine AMC chrome
+(Nov 25 review: button hover, live main menu minus Home, scroll-away header,
+sticky bottom CTA, Short Answer stock images on service and condition pages).
 
-- noindex,nofollow meta and robots.txt Disallow: /
-- Forms off: no form actions, inputs and buttons disabled, no tracking scripts
-- Not the live site. Not sent to the client. Waiting for a named thumbs-up before any Grok Build row.
+- noindex,nofollow on every page and robots.txt Disallow: /
+- Forms off: disabled inputs and buttons, no form actions, no tracking
+- Service and condition pages use tools/bd-generator/catalog
+- Locations hub links the 11 finished location previews (rows 1160-1169 + Copperas Cove)
+- Location subfolders already in this repo are left untouched
+- Review layer: assets/review-comments.js
+- Not the live site. Not sent to the client.
