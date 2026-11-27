@@ -234,7 +234,7 @@ def header(prefix: str) -> str:
     return f'''<div class="preview" role="status">Design preview, not live &middot; Forms are off &middot; Not for public use</div>
 <div class="util"><div class="wrap">
   <div><b>Free Insurance Verification</b> &middot; Se Habla Espa&ntilde;ol</div>
-  <div class="u-right">11 locations across Central Texas &middot; <a href="tel:{HUB_PHONE}">{HUB_DISPLAY}</a></div>
+  <div class="u-right">12 locations across Central Texas &middot; <a href="tel:{HUB_PHONE}">{HUB_DISPLAY}</a></div>
 </div></div>
 <header class="hdr"><div class="wrap">
   <a class="logo" href="{prefix}" aria-label="Anthony Medical &amp; Chiropractic Center home"><img src="{prefix}assets/img/logo.svg" alt="Anthony Medical &amp; Chiropractic Center" width="465" height="60"></a>
@@ -256,7 +256,7 @@ def footer(prefix: str) -> str:
     return f'''<footer>
   <div class="wrap">
     <div class="f-grid wide">
-      <div><img class="logo-w" src="{prefix}assets/img/logo-white.svg" alt="Anthony Medical &amp; Chiropractic Center"><p>Anthony Medical &amp; Chiropractic Center<br>11 offices across Central Texas</p><p><a href="tel:{HUB_PHONE}"><b>{HUB_DISPLAY}</b></a></p><p>Free insurance verification. Se Habla Espa&ntilde;ol.</p></div>
+      <div><img class="logo-w" src="{prefix}assets/img/logo-white.svg" alt="Anthony Medical &amp; Chiropractic Center"><p>Anthony Medical &amp; Chiropractic Center<br>12 offices across Central Texas</p><p><a href="tel:{HUB_PHONE}"><b>{HUB_DISPLAY}</b></a></p><p>Free insurance verification. Se Habla Espa&ntilde;ol.</p></div>
       <div><h4>About</h4><ul>
         <li><a href="{prefix}us/">Meet the Chiropractors</a></li>
         <li><a href="{prefix}us-acupuncturists/">Meet The Acupuncturists</a></li>
@@ -357,7 +357,7 @@ def loc_map_block() -> str:
     return (
         '<p class="loc-note">Map mockup. Each pin is one office. The cards underneath are the same list, '
         'so you can compare the two before choosing.</p>\n'
-        '    <div id="loc-map" class="loc-map" role="region" aria-label="Map of the 11 offices"></div>\n'
+        '    <div id="loc-map" class="loc-map" role="region" aria-label="Map of the 12 offices"></div>\n'
         f'    <script type="application/json" id="loc-map-data">{data}</script>'
     )
 
@@ -365,7 +365,7 @@ def loc_map_block() -> str:
 def aside(prefix: str) -> str:
     return f'''<aside class="aside">
   <div class="acard"><h3>Find a location</h3>
-  <p>11 offices across Central Texas. Pick the one closest to you.</p>
+  <p>12 offices across Central Texas. Pick the one closest to you.</p>
   <a class="ph" href="tel:{HUB_PHONE}">{HUB_DISPLAY}</a>
   <a class="btn btn-primary" href="{prefix}special/">New Patient Specials</a>
   <a class="btn btn-dark" href="{prefix}locations/">All Locations</a></div>
@@ -383,7 +383,7 @@ def cta_band(prefix: str, h2: str = "Call for an appointment") -> str:
   <div class="eyebrow" style="color:var(--orange)">We look forward to caring for you</div>
   <h2>{h2}</h2>
   <a class="phone" href="tel:{HUB_PHONE}">{HUB_DISPLAY}</a>
-  <p>11 locations across Central Texas. Free insurance verification. Se Habla Espa&ntilde;ol.</p>
+  <p>12 locations across Central Texas. Free insurance verification. Se Habla Espa&ntilde;ol.</p>
   <div class="ctas"><a class="btn btn-primary" href="{prefix}locations/">Find a Location</a><a class="btn btn-ghost" href="{prefix}special/">New Patient Specials</a></div>
 </div></section>'''
 
@@ -704,14 +704,14 @@ def home_main(imgs: dict, team: list[dict]) -> str:
   <div class="wrap">
     <div class="eyebrow" style="color:#fff">Serving patients across Central Texas</div>
     <h1>Chiropractic, medical care and massage, <em>under one roof.</em></h1>
-    <p class="lead">A team-based approach that combines chiropractic care, medical treatments, massage therapy and wellness solutions, at 11 locations from Waco to Round Rock.</p>
+    <p class="lead">A team-based approach that combines chiropractic care, medical treatments, massage therapy and wellness solutions, at 12 locations from Waco to Round Rock.</p>
     <div class="ctas">
       <a class="btn btn-primary" href="special/">See New Patient Specials</a>
       <a class="btn btn-ghost" href="locations/">Find a Location</a>
     </div>
   </div>
   <div class="trust"><div class="wrap">
-    <span><i>11</i> Central Texas locations</span>
+    <span><i>12</i> Central Texas locations</span>
     <span><b class="dot" style="background:var(--green)"></b>Free insurance verification</span>
     <span><b class="dot" style="background:var(--orange)"></b>Se Habla Espa&ntilde;ol</span>
     <span><b class="dot" style="background:var(--blue)"></b>CareCredit financing</span>
@@ -801,7 +801,7 @@ def home_main(imgs: dict, team: list[dict]) -> str:
       <div class="why-item"><div class="n" style="background:var(--purple);color:#fff">03</div><h3>Science-Based Therapies</h3><p>From manipulation and manual therapy to decompression, assisted stretching and corrective exercise, each treatment is chosen with research behind it.</p></div>
       <div class="why-item"><div class="n" style="background:var(--blue)">04</div><h3>Tailored Treatment Plans</h3><p>Every care plan is designed around the individual diagnosis.</p></div>
       <div class="why-item"><div class="n" style="background:var(--green)">05</div><h3>Affordable, Honest Care</h3><p>A high standard of care balanced with practical, cost-conscious options.</p></div>
-      <div class="why-item"><div class="n" style="background:var(--orange)">06</div><h3>One Convenient Location</h3><p>Multiple specialties under one roof, at 11 offices across Central Texas.</p></div>
+      <div class="why-item"><div class="n" style="background:var(--orange)">06</div><h3>One Convenient Location</h3><p>Multiple specialties under one roof, at 12 offices across Central Texas.</p></div>
     </div>
   </div>
 </section>
@@ -833,7 +833,7 @@ def home_main(imgs: dict, team: list[dict]) -> str:
   <div class="wrap">
     <div class="bhead">
       <div class="eyebrow e-green">Find your location</div>
-      <h2>11 offices across <span class="accent">Central Texas</span></h2>
+      <h2>12 offices across <span class="accent">Central Texas</span></h2>
       <p>Each card opens that location&rsquo;s finished design preview. NAP and phone come from those builds.</p>
     </div>
     {loc_map_block()}
@@ -949,10 +949,10 @@ def main() -> None:
     write_page(
         "locations",
         "Locations | Anthony Medical & Chiropractic Center",
-        "11 Anthony Medical & Chiropractic Center offices across Central Texas.",
+        "12 Anthony Medical & Chiropractic Center offices across Central Texas.",
         f'''<section class="phero"><div class="wrap">
 <div class="crumbs"><a href="../">Home</a> / Locations</div>
-<h1>11 offices across <em>Central Texas</em></h1>
+<h1>12 offices across <em>Central Texas</em></h1>
 <p class="lead">Each location has its own phone, address, team and new-patient specials. These cards open the finished design preview for that office.</p>
 </div></section>
 <section class="band locs"><div class="wrap">
@@ -1173,7 +1173,7 @@ sticky bottom CTA, Short Answer stock images on service and condition pages).
 - noindex,nofollow on every page and robots.txt Disallow: /
 - Forms off: disabled inputs and buttons, no form actions, no tracking
 - Service and condition pages use tools/bd-generator/catalog
-- Locations hub links the 11 finished location previews (rows 1160-1169 + Copperas Cove)
+- Locations hub links the 11 finished location previews (rows 1160-1169 + Copperas Cove + Pflugerville)
 - Location subfolders already in this repo are left untouched
 - Review layer: assets/review-comments.js
 - Not the live site. Not sent to the client.
